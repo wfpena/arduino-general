@@ -1,7 +1,9 @@
 const int stepPin = 3; // Y.STEP
 const int dirPin = 6; // Y.DIR
-// const int stepPin = 2; // X.STEP
-// const int dirPin = 5; // X.DIR
+const int stepPin = 2; // X.STEP
+const int dirPin = 5; // X.DIR
+
+const stepperSpeed = 1000000;
 
 void setup() {
   pinMode(stepPin, OUTPUT);
@@ -13,9 +15,9 @@ void loop() {
 
   for(int x = 0; x < 200; x++) {
     digitalWrite(stepPin, HIGH); 
-    delayMicroseconds(1000000);
+    delayMicroseconds(stepperSpeed);
     digitalWrite(stepPin, LOW); 
-    delayMicroseconds(1000000);
+    delayMicroseconds(stepperSpeed);
   }
   delay(1000);
 
@@ -23,9 +25,9 @@ void loop() {
 
   for(int x = 0; x < 200; x++) {
     digitalWrite(stepPin, HIGH); 
-    delayMicroseconds(1000000);
+    delayMicroseconds(stepperSpeed);
     digitalWrite(stepPin, LOW); 
-    delayMicroseconds(1000000);
+    delayMicroseconds(stepperSpeed);
   }
   delay(1000);
 }
