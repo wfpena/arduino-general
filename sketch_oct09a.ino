@@ -3,7 +3,7 @@ const int dirPin = 6; // Y.DIR
 // const int stepPin = 2; // X.STEP
 // const int dirPin = 5; // X.DIR
 
-const stepperSpeed = 1000000;
+const stepperSpeed = 100000;
 
 void setup() {
   pinMode(stepPin, OUTPUT);
